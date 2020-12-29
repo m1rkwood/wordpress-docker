@@ -1,18 +1,18 @@
-# Install Wordpress inside a Docker Container for development
+# Your Wordpress site inside a Docker Container
 
 Docker setup to install your Wordpress site locally as a development environment.
 
 ## Prepare you database & files
 
 Export your database from your production site.
-Open the .sql file with an editor and change your production url (i.e `https://example.com` && `https://www.example.com`) to `http://127.0.0.1:8080`) using search and replace.
+Open the .sql file with an editor and change your production url (i.e `https://example.com` && `https://www.example.com`) to `http://127.0.0.1:8080` using search and replace.
 
-Export the `wp-content` folder of your Wordpress.
+Export the `wp-content` folder of your Wordpress site.
 
 ## Setup folder structure & .env
 
-Create an `import` folder.
-Import your `wp-content` folder to the root of your project.
+Create an `import` folder.  
+Import your `wp-content` folder to the root of your project.  
 You should have the following folder structure:
 
 ```
@@ -25,7 +25,8 @@ disable_plugins.sh
 
 Add an export of your database to `import` (.sql format or other)
 
-Duplicate the `.env.template` file and fill all the necessary information (for username and passwords, no need to use the same values as your production site). You might want to use `DISABLED_PLUGINS` to disable some plugins like the SEO plugins or the ones that could force SSL.
+Duplicate the `.env.template` file and fill all the necessary information (for username and passwords, no need to use the same values as your production site).  
+You might want to use `DISABLED_PLUGINS` to disable some plugins like the SEO plugins or the ones that could force SSL.
 
 ## Modify docker-compose.yml
 
