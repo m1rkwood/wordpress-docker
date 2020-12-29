@@ -1,0 +1,4 @@
+wp-content/
+import/
+.env
+.DS_STORE
